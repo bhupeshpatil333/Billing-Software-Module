@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Paarsh Task\\My_Task1\\My_Task1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|c:\\paarsh task\\my_task1\\my_task1\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|solutionrelative:controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|C:\\Paarsh Task\\My_Task1\\My_Task1\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|solutionrelative:views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|C:\\Paarsh Task\\My_Task1\\My_Task1\\controllers\\billingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|solutionrelative:controllers\\billingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|C:\\Paarsh Task\\My_Task1\\My_Task1\\views\\customer\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|solutionrelative:views\\customer\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|C:\\Paarsh Task\\My_Task1\\My_Task1\\dal\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516B857A-C55A-4FB8-A443-DACEE2F854F1}|My_Task1.csproj|solutionrelative:dal\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Paarsh Task\\My_Task1\\My_Task1\\Views\\Customer\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Customer\\Index.cshtml",
+              "ToolTip": "C:\\Paarsh Task\\My_Task1\\My_Task1\\Views\\Customer\\Index.cshtml",
+              "RelativeToolTip": "Views\\Customer\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-01T04:44:18.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Paarsh Task\\My_Task1\\My_Task1\\Views\\Customer\\Add.cshtml",
+              "RelativeDocumentMoniker": "Views\\Customer\\Add.cshtml",
+              "ToolTip": "C:\\Paarsh Task\\My_Task1\\My_Task1\\Views\\Customer\\Add.cshtml",
+              "RelativeToolTip": "Views\\Customer\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-01T04:31:49.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Paarsh Task\\My_Task1\\My_Task1\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Paarsh Task\\My_Task1\\My_Task1\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "Controllers\\CustomerController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T04:22:22.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Paarsh Task\\My_Task1\\My_Task1\\DAL\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "DAL\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Paarsh Task\\My_Task1\\My_Task1\\DAL\\DatabaseHelper.cs",
+              "RelativeToolTip": "DAL\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4BAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T15:11:56.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BillingController.cs",
+              "DocumentMoniker": "C:\\Paarsh Task\\My_Task1\\My_Task1\\Controllers\\BillingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BillingController.cs",
+              "ToolTip": "C:\\Paarsh Task\\My_Task1\\My_Task1\\Controllers\\BillingController.cs",
+              "RelativeToolTip": "Controllers\\BillingController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T12:50:26.728Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*new Part form Dashbord*/
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 300px;
+}
+
+.header-icons img {
+    width: 24px;
+    margin-left: 10px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.report {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+
+
+body {
+    background-color: #f4f7fa;
+}
+
+.dashboard-navigation h4 {
+    margin-bottom: 10px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    font-size: 2rem;
+    margin: 0;
+}

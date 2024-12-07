@@ -1,0 +1,72 @@
+﻿@model My_Task1.Models.Billing
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2 class="text-center my-4">Add Billing</h2>
+
+<div class="container">
+    @using (Html.BeginForm("InsertBilling", "Billing", FormMethod.Post, new { @id = "addBillingForm" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.CustomerID)
+            @Html.DropDownListFor(m => m.CustomerID, (SelectList)ViewBag.Customers, "Select a Customer", new { @class = "form-control", @id = "customerID" })
+            <span id="customerID-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Product")
+            @Html.DropDownList("ProductID", new SelectList(ViewBag.Products, "ProductID", "ProductName"), "Select a Product", new { @class = "form-control", @id = "productID" })
+            <span id="productID-error" class="text-danger"></span>
+        </div>
+
+        
+        <div class="form-group">
+            @Html.LabelFor(m => m.BillingDate)
+            @Html.TextBoxFor(m => m.BillingDate, new { @class = "form-control", @id = "billingDate", placeholder = "Choose Date", type = "date" })
+            <span id="date-error" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.TotalAmount)
+            @Html.TextBoxFor(m => m.TotalAmount, new { @class = "form-control", @id = "totalAmount", placeholder = "Enter total amount" })
+            <span id="totalAmount-error" class="text-danger"></span>
+        </div>
+        <input type="submit" value="Save" class="btn btn-success" />
+    }
+</div>
+
+<script>document.getElementById('addBillingForm').addEventListener('submit', function(event) {
+        let isValid = true;
+
+        
+        document.getElementById('customerID-error').textContent = '';
+        document.getElementById('totalAmount-error').textContent = '';
+         document.getElementById('date-error').textContent = '';
+
+       
+        const customerID = document.getElementById('customerID').value;
+        if (customerID === '' || customerID === 'Select a Customer') {
+            document.getElementById('customerID-error').textContent = 'Please select a customer';
+            isValid = false;
+        }
+        const BillingDate = document.getElementById('billingDate').value;
+         if (BillingDate === '' || BillingDate === 'Choose Date') {
+        document.getElementById('date-error').textContent = 'Please Choose Date';
+        isValid = false;
+        }
+
+        
+        const totalAmount = document.getElementById('totalAmount').value;
+        if (totalAmount.trim() === '') {
+            document.getElementById('totalAmount-error').textContent = 'Total amount is required';
+            isValid = false;
+        } else if (isNaN(totalAmount) || totalAmount <= 0) {
+            document.getElementById('totalAmount-error').textContent = 'Enter a valid amount';
+            isValid = false;
+        }
+
+        
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });</script>

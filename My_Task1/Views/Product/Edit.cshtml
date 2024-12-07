@@ -1,0 +1,132 @@
+﻿@model My_Task1.Models.Product
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="container">
+    <h2 class="my-4">Edit Product</h2>
+
+    @using (Html.BeginForm("EditProduct", "Product", FormMethod.Post, new { @class = "product-form", @id = "editProductForm" }))
+    {
+        @Html.HiddenFor(m => m.ProductID)
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductName, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.ProductName, new { @class = "form-control", @id = "productName", placeholder = "Enter product name" })
+            <span id="productName-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductPrice, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.ProductPrice, new { @class = "form-control", @id = "productPrice", placeholder = "Enter product price" })
+            <span id="productPrice-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductQuantity, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.ProductQuantity, new { @class = "form-control", @id = "productQuantity", placeholder = "Enter product quantity" })
+            <span id="productQuantity-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductBrand, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.ProductBrand, new { @class = "form-control", @id = "productBrand", placeholder = "Enter product brand" })
+            <span id="productBrand-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductSupplier, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.ProductSupplier, new { @class = "form-control", @id = "productSupplier", placeholder = "Enter product supplier" })
+            <span id="productSupplier-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.OldStock, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.OldStock, new { @class = "form-control", @id = "oldStock", placeholder = "Enter old stock" })
+            <span id="oldStock-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductCategory, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.ProductCategory, new { @class = "form-control", @id = "productCategory", placeholder = "Enter product category" })
+            <span id="productCategory-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    }
+</div>
+
+<script>document.getElementById('editProductForm').addEventListener('submit', function(event) {
+        let isValid = true;
+
+        
+        document.getElementById('productName-error').textContent = '';
+        document.getElementById('productPrice-error').textContent = '';
+        document.getElementById('productQuantity-error').textContent = '';
+        document.getElementById('productBrand-error').textContent = '';
+        document.getElementById('productSupplier-error').textContent = '';
+        document.getElementById('oldStock-error').textContent = '';
+        document.getElementById('productCategory-error').textContent = '';
+
+       
+        const productName = document.getElementById('productName').value;
+        if (productName.trim() === '') {
+            document.getElementById('productName-error').textContent = 'Product name is required';
+            isValid = false;
+        }
+
+       
+        const productPrice = document.getElementById('productPrice').value;
+        if (productPrice.trim() === '') {
+            document.getElementById('productPrice-error').textContent = 'Product price is required';
+            isValid = false;
+        } else if (isNaN(productPrice) || productPrice <= 0) {
+            document.getElementById('productPrice-error').textContent = 'Enter a valid price';
+            isValid = false;
+        }
+
+        
+        const productQuantity = document.getElementById('productQuantity').value;
+        if (productQuantity.trim() === '') {
+            document.getElementById('productQuantity-error').textContent = 'Product quantity is required';
+            isValid = false;
+        } else if (!Number.isInteger(Number(productQuantity)) || productQuantity <= 0) {
+            document.getElementById('productQuantity-error').textContent = 'Enter a valid quantity';
+            isValid = false;
+        }
+
+        
+        const productBrand = document.getElementById('productBrand').value;
+        if (productBrand.trim() === '') {
+            document.getElementById('productBrand-error').textContent = 'Product brand is required';
+            isValid = false;
+        }
+
+       
+        const productSupplier = document.getElementById('productSupplier').value;
+        if (productSupplier.trim() === '') {
+            document.getElementById('productSupplier-error').textContent = 'Product supplier is required';
+            isValid = false;
+        }
+
+        const oldStock = document.getElementById('oldStock').value;
+        if (oldStock && isNaN(oldStock)) {
+            document.getElementById('oldStock-error').textContent = 'Old stock must be a valid number';
+            isValid = false;
+        }
+
+        
+        const productCategory = document.getElementById('productCategory').value;
+        if (productCategory.trim() === '') {
+            document.getElementById('productCategory-error').textContent = 'Product category is required';
+            isValid = false;
+        }
+
+        
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });</script>
+

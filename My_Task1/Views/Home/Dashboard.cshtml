@@ -1,0 +1,39 @@
+﻿@model My_Task1.Models.DashboardViewModel
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+
+<div class="container mt-5">
+    <h2 class="text-center">Dashboard</h2>
+
+    <div class="dashboard-navigation mb-4">
+        
+        <ul class="list-inline text-center">
+            <li class="list-inline-item">@Html.ActionLink("Customers", "Index", "Customer", null, new { @class = "btn btn-primary" })</li>
+            <li class="list-inline-item">@Html.ActionLink("Products", "Index", "Product", null, new { @class = "btn btn-primary" })</li>
+            <li class="list-inline-item">@Html.ActionLink("Billing", "Index", "Billing", null, new { @class = "btn btn-primary" })</li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h3 class="card-title">Total Sales</h3>
+                    <p class="card-text display-4">@Model.TotalSales</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h3 class="card-title">Total Revenue</h3>
+                    <p class="card-text display-4">@Model.TotalRevenue.ToString("C")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

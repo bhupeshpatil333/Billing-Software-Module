@@ -1,0 +1,92 @@
+﻿@model My_Task1.Models.Customer
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="container">
+    <h2 class="my-4">Edit Customer</h2>
+
+    @using (Html.BeginForm("EditByID", "Customer", FormMethod.Post, new { @class = "customer-form", @id = "editCustomerForm" }))
+    {
+        @Html.HiddenFor(m => m.CustomerID)
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @id = "editName", placeholder = "Enter customer name" })
+            <span id="editName-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Gender, new { @class = "control-label" })
+            @Html.DropDownListFor(m => m.Gender, new SelectList(new List<string> { "Male", "Female", "Other" }), "Select Gender", new { @class = "form-control", @id = "editGender" })
+            <span id="editGender-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Contact, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.Contact, new { @class = "form-control", @id = "editContact", placeholder = "Enter contact number" })
+            <span id="editContact-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @id = "editEmail", placeholder = "Enter email address" })
+            <span id="editEmail-error" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    }
+</div>
+
+<script>
+    document.getElementById('editCustomerForm').addEventListener('submit', function(event) {
+        let isValid = true;
+
+        
+        document.getElementById('editName-error').textContent = '';
+        document.getElementById('editGender-error').textContent = '';
+        document.getElementById('editContact-error').textContent = '';
+        document.getElementById('editEmail-error').textContent = '';
+
+      
+        const name = document.getElementById('editName').value;
+        if (name.trim() === '') {
+            document.getElementById('editName-error').textContent = 'Name is required';
+            isValid = false;
+        }
+
+       
+        const gender = document.getElementById('editGender').value;
+        if (gender === 'Select Gender') {
+            document.getElementById('editGender-error').textContent = 'Please select a gender';
+            isValid = false;
+        }
+
+        
+        const contact = document.getElementById('editContact').value;
+        if (contact.trim() === '') {
+            document.getElementById('editContact-error').textContent = 'Contact is required';
+            isValid = false;
+        } else if (!/^\d+$/.test(contact)) {
+            document.getElementById('editContact-error').textContent = 'Contact must be numeric';
+            isValid = false;
+        }
+
+       
+        const email = document.getElementById('editEmail').value;
+       
+        if (email.trim() === '') {
+            document.getElementById('editEmail-error').textContent = 'Email is required';
+            isValid = false;
+        } else if (!emailRegex.test(email)) {
+            document.getElementById('editEmail-error').textContent = 'Invalid email format';
+            isValid = false;
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+</script>
